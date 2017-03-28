@@ -2,48 +2,67 @@
  <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href= "./css/calculadora.css">
-        <title>Ejercicio 5.5.10 - Calculadora binaria</title>
+        <link rel="stylesheet" href= "css/calculadora.css" type="text/css">
+        <script src="js/calculadora.js" type="text/javascript"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <title>Calculadora SPA</title>
     </head>
     <body>
-        <h1>Minipráctica 1 - Calculadora SPA</h1>
-        <div id="calculator">
-          </br>
-          <div id="display"></div>
-          </br>
-          <div id="buttons">
-            <div id="numbers">
-                <button type="button" class="btn-num">7</button>
-                <button type="button" class="btn-num">8</button>
-                <button type="button" class="btn-num">9</button>
-                </br>
-                <button type="button" class="btn-num">4</button>
-                <button type="button" class="btn-num">5</button>
-                <button type="button" class="btn-num">6</button>
-                </br>
-                <button type="button" class="btn-num">1</button>
-                <button type="button" class="btn-num">2</button>
-                <button type="button" class="btn-num">3</button>
-                </br>
-                <button type="button" class="btn-num">0</button>
-                <button type="button" class="btn-num">.</button>
-                <button type="button" class="btn-num">CE</button>
+      <h1>Minipráctica 1 - Calculadora SPA</h1>
+      </br></br>
 
-            </div>
-            <div id="operations">
-                <button type="button" class="btn-op">/</button>
-                <button type="button" class="btn-op">x</button>
-                </br>
-                <button type="button" class="btn-op">-</button>
-                <button type="button" class="btn-op">+</button>
-                </br>
-                <button type="button" id="eq" class="btn-op">=</button>
-            </div>
-          </div>
+      <!-- CALCULADORA -->
+      <div id="calculadora">
+        <!-- pantalla y tecla limpiar -->
+        <div class="parteSuperior">
+          <div class="pantalla"> </div>
         </div>
-        </br></br></br></br>
-        <footer>
-            <p>Nerea Del Olmo Sanz</p>
-        </footer>
+
+        <div class="teclas">
+          <!-- operadores y otras teclas -->
+          <span onclick="pulsada('7')">7</span>
+          <span onclick="pulsada('8')">8</span>
+          <span onclick="pulsada('9')">9</span>
+          <span class="operador" onclick="pulsada('+')">+</span>
+          <span class="operador" onclick="pulsada('-')">-</span>
+          <span class="operador" onclick="pulsada('%')">%</span>
+
+
+          <span onclick="pulsada('4')">4</span>
+          <span onclick="pulsada('5')">5</span>
+          <span onclick="pulsada('6')">6</span>
+          <span class="operador" onclick="pulsada('*')">x</span>
+          <span class="operador" onclick="pulsada('/')">&divide;</span>
+          <span class="operador" onclick="pulsada('^')">^</span>
+
+
+          <span onclick="pulsada('1')">1</span>
+          <span onclick="pulsada('2')">2</span>
+          <span onclick="pulsada('3')">3</span>
+          <span class="operador" onclick="pulsada('(')">(</span>
+          <span class="operador" onclick="pulsada(')')">)</span>
+      <!-- z! -->
+
+          <span class="operador" onclick="pulsada('z')">&radic;</span>
+
+
+          <span onclick="pulsada('0')">0</span>
+          <span onclick="pulsada('00')">00</span>
+          <span onclick="pulsada('.')">.</span>
+          <span class="limpiar" onclick="pulsada('C')">CE</span>
+          <span class="igual" onclick="pulsada('=')">=</span>
+
+        </div>
+      </div>
+      <!-- FIN CALCULADORA -->
+
+
+
+      </br></br>
+      </br></br>
+      </br></br>
+      <footer>
+        <p>Nerea Del Olmo Sanz</p>
+      </footer>
     </body>
  </html>
