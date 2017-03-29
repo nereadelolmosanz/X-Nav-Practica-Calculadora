@@ -4,7 +4,7 @@ body {
   background-color: #FA5882;
 }
 
-#calculadora {
+#calculator {
   font: bold 14px Arial, sans-serif;
   background-color: #848484;
   border-radius: 3px;
@@ -14,10 +14,10 @@ body {
   width: 438px;
 }
 
-.parteSuperior .pantalla {
+.display {
   background-color: #F2F2F2;
   border-radius: 3px;
-  color: #FFFFFF;
+  color: #FFFFFoperator
   font-size: 17px;
   height: 40px;
   letter-spacing: 1px;
@@ -28,13 +28,12 @@ body {
   width: 392px;
 }
 
-.teclas,
-.parteSuperior {
+.keys,
+.display {
   overflow: hidden;
 }
 
-.teclas span,
-span.limpiar {
+.keys span{
   background-color: #CEECF5;
   border-radius: 3px;
   color: #000000;
@@ -48,27 +47,27 @@ span.limpiar {
   width: 66px;
 }
 
-.parteSuperior span.limpiar {
+span.clear {
   background-color:#FF7C87;
 }
 
-.teclas span.operador {
+span.operator {
   background-color: #A9D0F5;
   margin: 0 7px 11px 0;
 }
 
-.teclas span.igual {
+span.equals {
   background-color: #81BEF7;
   width: 139px;
 }
 
-span.limpiar {
+.keys span.clear {
   background-color: #FF9FA8;
 }
 
-.teclas span:hover,
-.teclas span.igual:hover,
-.parteSuperior span.limpiar:hover {
+.keys span:hover,
+.keys span.equals:hover,
+.keys span.clear:hover {
   background-color: #0431B4;
   color: #FFFFFF;
 }
