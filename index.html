@@ -12,45 +12,42 @@
       </br></br>
 
       <!-- CALCULADORA -->
-      <div id="calculadora">
-        <!-- pantalla y tecla limpiar -->
-        <div class="parteSuperior">
-          <div class="pantalla"> </div>
-        </div>
+      <div id="calculator">
+        <!-- pantalla -->
+        <div class="display"> </div>
 
-        <div class="teclas">
+        <div class="keys">
           <!-- operadores y otras teclas -->
-          <span onclick="pulsada('7')">7</span>
-          <span onclick="pulsada('8')">8</span>
-          <span onclick="pulsada('9')">9</span>
-          <span class="operador" onclick="pulsada('+')">+</span>
-          <span class="operador" onclick="pulsada('-')">-</span>
-          <span class="operador" onclick="pulsada('%')">%</span>
+          <span onclick="selectedKey('7')">7</span>
+          <span onclick="selectedKey('8')">8</span>
+          <span onclick="selectedKey('9')">9</span>
+          <span class="operator" onclick="selectedKey('+')">+</span>
+          <span class="operator" onclick="selectedKey('-')">-</span>
+          <span class="operator" onclick="selectedKey('%')">%</span>
+          <!-- /primera fila -->
 
+          <span onclick="selectedKey('4')">4</span>
+          <span onclick="selectedKey('5')">5</span>
+          <span onclick="selectedKey('6')">6</span>
+          <span class="operator" onclick="selectedKey('*')">x</span>
+          <span class="operator" onclick="selectedKey('/')">&divide;</span>
+          <span class="operator" onclick="selectedKey('^')">^</span>
+          <!-- /segunda fila -->
 
-          <span onclick="pulsada('4')">4</span>
-          <span onclick="pulsada('5')">5</span>
-          <span onclick="pulsada('6')">6</span>
-          <span class="operador" onclick="pulsada('*')">x</span>
-          <span class="operador" onclick="pulsada('/')">&divide;</span>
-          <span class="operador" onclick="pulsada('^')">^</span>
+          <span onclick="selectedKey('1')">1</span>
+          <span onclick="selectedKey('2')">2</span>
+          <span onclick="selectedKey('3')">3</span>
+          <span class="operator" onclick="selectedKey('(')">(</span>
+          <span class="operator" onclick="selectedKey(')')">)</span>
+          <span class="operator" onclick="selectedKey('sqr')">&radic;</span>
+          <!-- /tercera fila -->
 
-
-          <span onclick="pulsada('1')">1</span>
-          <span onclick="pulsada('2')">2</span>
-          <span onclick="pulsada('3')">3</span>
-          <span class="operador" onclick="pulsada('(')">(</span>
-          <span class="operador" onclick="pulsada(')')">)</span>
-      <!-- z! -->
-
-          <span class="operador" onclick="pulsada('z')">&radic;</span>
-
-
-          <span onclick="pulsada('0')">0</span>
-          <span onclick="pulsada('00')">00</span>
-          <span onclick="pulsada('.')">.</span>
-          <span class="limpiar" onclick="pulsada('C')">CE</span>
-          <span class="igual" onclick="pulsada('=')">=</span>
+          <span onclick="selectedKey('0')">0</span>
+          <span onclick="selectedKey('00')">00</span>
+          <span onclick="selectedKey('.')">.</span>
+          <span class="clear" onclick="selectedKey('C')">CE</span>
+          <span class="equals" onclick="selectedKey('=')">=</span>
+          <!-- /cuarta fila -->
 
         </div>
       </div>
