@@ -12,12 +12,13 @@ body {
   margin: 0 auto;
   padding: 20px 15px 9px 20px;
   width: 438px;
+  overflow: hidden;
 }
 
 .display {
   background-color: #F2F2F2;
   border-radius: 3px;
-  color: #FFFFFoperator
+  color: #000000;
   font-size: 17px;
   height: 40px;
   letter-spacing: 1px;
@@ -25,15 +26,11 @@ body {
   padding: 0px 20px;
   margin: 0 7px 11px 0;
   text-align: right;
-  width: 392px;
-}
-
-.keys,
-.display {
-  overflow: hidden;
+  width: 388px;
 }
 
 .keys span{
+  overflow: hidden;
   background-color: #CEECF5;
   border-radius: 3px;
   color: #000000;
