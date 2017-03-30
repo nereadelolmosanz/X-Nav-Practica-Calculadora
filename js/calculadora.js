@@ -1,22 +1,33 @@
 var calc = function(){
+
+  $(".display").val("0");
   var equation = "";
-  var op1 = "";
-  var op2 = "";
+  var exp = "";
+  var ans = "0";
   var sqr = false;
   var pow = false;
+  var perc = false;
 
   $(".num").click(function(){
-    if (op1 != ""){
-      op2 = $(this).html();
+    if (pow) {
+      exp = $(this).html();
     }
     equation += $(this).html();
     $(".display").val(equation);
   })
 
   $(".operator").click(function(){
+    if (equation == ""){
+      equation += ans;
+    }
     if ($(this).html() == "√"){
-      equation = Math.sqrt(parseFloat(equation));
-      $(".display").val(equation);
+      equation = eval(equation);
+      ans = Math.sqrt(parseFloat(equation));
+      $(".display").val(ans);
+      if (ans == NaN) {
+        ans = "0";
+      }
+      equation = "";    
     } else {
       if ($(this).html() == "x") {
         equation += "*";
@@ -24,13 +35,14 @@ var calc = function(){
         equation += "/";
       } else if ($(this).html() == "^"){
         pow = true;
-        if (op1 == ""){
-          op1 = equation;
-        }
-        equation += $(this).html();
+        ans = equation;
+        equation += "^";
+      } else if ($(this).html() == "%"){
+        ans = eval(equation)/100;
+        equation = ans + "*";
       } else {
         equation += $(this).html();
-      }
+      } 
       $(".display").val(equation);
     }
   })
@@ -38,24 +50,19 @@ var calc = function(){
   $(".equals").click(function(){
     if (pow){
       pow = false;
-      if (op1 == ""){
-        equation = 0;
-      } else {
-        console.log(op1);
-        console.log(op2);
-        equation = Math.pow(parseFloat(op1),parseFloat(op2));
-      }
-    } else {
-      equation = eval(equation);
+      ans = Math.pow(parseFloat(ans),parseFloat(exp));
+    }else {
+      ans = eval(equation);
     }
-    $(".display").val(equation);
-    op1 = equation;
+    $(".display").val(ans);
+    equation = "";
   })
 
   $(".clear").click(function(){
     equation = "";
     op1 = "";
     op2 = "";
+    ans = "";
     $(".display").val(0);
   })
 
