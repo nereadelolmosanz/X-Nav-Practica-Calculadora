@@ -1,5 +1,4 @@
 var calc = function(){
-
   $(".display").val("0");
   var equation = "";
   var exp = "";
@@ -65,7 +64,5 @@ var calc = function(){
     ans = "";
     $(".display").val(0);
   })
-
 };
-
 jQuery(document).ready(calc);
