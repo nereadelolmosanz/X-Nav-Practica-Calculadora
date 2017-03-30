@@ -3,7 +3,6 @@ body {
   text-align:center;
   background-color: #FA5882;
 }
-
 #calculator {
   font: bold 14px Arial, sans-serif;
   background-color: #848484;
@@ -14,7 +13,6 @@ body {
   width: 438px;
   overflow: hidden;
 }
-
 .display {
   background-color: #F2F2F2;
   border-radius: 3px;
@@ -28,7 +26,6 @@ body {
   text-align: right;
   width: 388px;
 }
-
 .keys span{
   overflow: hidden;
   background-color: #CEECF5;
@@ -43,25 +40,20 @@ body {
   transition: all 0.4s ease 0s;
   width: 66px;
 }
-
 span.clear {
   background-color:#FF7C87;
 }
-
 span.operator {
   background-color: #A9D0F5;
   margin: 0 7px 11px 0;
 }
-
 span.equals {
   background-color: #81BEF7;
   width: 139px;
 }
-
 .keys span.clear {
   background-color: #FF9FA8;
 }
-
 .keys span:hover,
 .keys span.equals:hover,
 .keys span.clear:hover {
